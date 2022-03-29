@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210914 11:31:48.332" rpa="false" schemaversion="2">
+<suite id="s1" name="test.payByCheck" source="C:\testeRobot\test.case\test.payByCheck.robot">
+<test id="s1-t1" name="Must purchase a shorts with change of address">
+<kw name="New Session" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210914 11:31:48.539" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20210914 11:31:48.538" endtime="20210914 11:31:53.698"/>
+</kw>
+<status status="PASS" starttime="20210914 11:31:48.538" endtime="20210914 11:31:53.698"/>
+</kw>
+<kw name="Select Product" library="base">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>My Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210914 11:31:53.705" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20210914 11:31:53.699" endtime="20210914 11:31:53.705"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}?id_category=5&amp;controller=category</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210914 11:31:53.706" level="INFO">Opening url 'http://automationpractice.com/index.php?id_category=5&amp;controller=category'</msg>
+<status status="PASS" starttime="20210914 11:31:53.706" endtime="20210914 11:31:56.193"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addToCart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210914 11:31:56.194" level="INFO">Clicking element 'css=a[title='Add to cart']'.</msg>
+<status status="PASS" starttime="20210914 11:31:56.194" endtime="20210914 11:31:56.265"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210914 11:32:01.280" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210914 11:31:56.265" endtime="20210914 11:32:01.280"/>
+</kw>
+<status status="PASS" starttime="20210914 11:31:53.699" endtime="20210914 11:32:01.280"/>
+</kw>
+<kw name="Add To Card" library="base">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${goCheckout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210914 11:32:01.282" level="INFO">Clicking element 'css=a[title='Proceed to checkout']'.</msg>
+<status status="PASS" starttime="20210914 11:32:01.281" endtime="20210914 11:32:03.080"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210914 11:32:08.095" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210914 11:32:03.080" endtime="20210914 11:32:08.095"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${proceedCheckout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210914 11:32:08.095" level="INFO">Clicking element 'css=a[class='button btn btn-default standard-checkout button-medium']'.</msg>
+<status status="PASS" starttime="20210914 11:32:08.095" endtime="20210914 11:32:10.504"/>
+</kw>
+<status status="PASS" starttime="20210914 11:32:01.281" endtime="20210914 11:32:10.504"/>
+</kw>
+<kw name="Login" library="base">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputEmail}</arg>
+<arg>candidato@justa.com.vc</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210914 11:32:10.506" level="INFO">Typing text 'candidato@justa.com.vc' into text field 'css=input[id=email]'.</msg>
+<status status="PASS" starttime="20210914 11:32:10.506" endtime="20210914 11:32:10.624"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputPasswd}</arg>
+<arg>tamojusto</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210914 11:32:10.624" level="INFO">Typing text 'tamojusto' into text field 'css=input[id=passwd]'.</msg>
+<status status="PASS" starttime="20210914 11:32:10.624" endtime="20210914 11:32:10.727"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${submitLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210914 11:32:10.727" level="INFO">Clicking element 'css=button[id=SubmitLogin]'.</msg>
+<status status="PASS" starttime="20210914 11:32:10.727" endtime="20210914 11:32:12.539"/>
+</kw>
+<status status="PASS" starttime="20210914 11:32:10.505" endtime="20210914 11:32:12.539"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${processAddress}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210914 11:32:12.540" level="INFO">Clicking element 'css=button[name='processAddress']'.</msg>
+<status status="PASS" starttime="20210914 11:32:12.540" endtime="20210914 11:32:13.971"/>
+</kw>
+<kw name="Shipping Option" library="base">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210914 11:32:13.973" level="INFO">Clicking element 'css=input[type=checkbox]'.</msg>
+<status status="PASS" starttime="20210914 11:32:13.972" endtime="20210914 11:32:14.036"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${processCarrier}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210914 11:32:14.037" level="INFO">Clicking element 'css=button[name='processCarrier']'.</msg>
+<status status="PASS" starttime="20210914 11:32:14.036" endtime="20210914 11:32:15.991"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210914 11:32:21.002" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210914 11:32:15.991" endtime="20210914 11:32:21.002"/>
+</kw>
+<status status="PASS" starttime="20210914 11:32:13.972" endtime="20210914 11:32:21.002"/>
+</kw>
+<kw name="Pay By Check" library="base">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${paymentCheck}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210914 11:32:21.004" level="INFO">Clicking element 'css=a[title='Pay by check.']'.</msg>
+<status status="PASS" starttime="20210914 11:32:21.003" endtime="20210914 11:32:22.174"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210914 11:32:27.181" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210914 11:32:22.175" endtime="20210914 11:32:27.181"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${finish}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210914 11:32:27.182" level="INFO">Clicking element 'css=button[class='button btn btn-default button-medium']'.</msg>
+<status status="PASS" starttime="20210914 11:32:27.181" endtime="20210914 11:32:29.873"/>
+</kw>
+<status status="PASS" starttime="20210914 11:32:21.003" endtime="20210914 11:32:29.873"/>
+</kw>
+<kw name="Logoff" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210914 11:32:30.061" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210914 11:32:29.876" endtime="20210914 11:32:30.061"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210914 11:32:30.062" endtime="20210914 11:32:33.281"/>
+</kw>
+<status status="PASS" starttime="20210914 11:32:29.875" endtime="20210914 11:32:33.281"/>
+</kw>
+<status status="PASS" starttime="20210914 11:31:48.537" endtime="20210914 11:32:33.281"/>
+</test>
+<status status="PASS" starttime="20210914 11:31:48.333" endtime="20210914 11:32:33.284"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="test.payByCheck">test.payByCheck</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
